@@ -1,56 +1,66 @@
-import { BookOpen, School, Briefcase, StickyNote, GraduationCap } from "lucide-react";
+import { BookOpen, School, Briefcase, GraduationCap, Home } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const NavigationBar = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const location = useLocation();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <GraduationCap className="w-6 h-6 text-primary" />
             <span className="font-bold text-lg text-foreground">What's Next?</span>
-          </div>
+          </Link>
           
           <div className="hidden md:flex items-center gap-2">
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection('master')}
               className="flex items-center gap-2"
+              asChild
             >
-              <BookOpen className="w-4 h-4" />
-              Master
+              <Link to="/">
+                <Home className="w-4 h-4" />
+                الرئيسية
+              </Link>
             </Button>
+            
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection('concours')}
               className="flex items-center gap-2"
+              asChild
             >
-              <School className="w-4 h-4" />
-              Concours
+              <Link to="/master">
+                <BookOpen className="w-4 h-4" />
+                Master
+              </Link>
             </Button>
+            
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection('alternance')}
               className="flex items-center gap-2"
+              asChild
             >
-              <Briefcase className="w-4 h-4" />
-              Alternance
+              <Link to="/concours">
+                <School className="w-4 h-4" />
+                Concours
+              </Link>
             </Button>
+            
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection('notes')}
               className="flex items-center gap-2"
+              asChild
             >
-              <StickyNote className="w-4 h-4" />
-              ملاحظات
+              <Link to="/alternance">
+                <Briefcase className="w-4 h-4" />
+                Alternance
+              </Link>
             </Button>
           </div>
           
@@ -58,9 +68,11 @@ const NavigationBar = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection('main-content')}
+              asChild
             >
-              القائمة
+              <Link to="/">
+                القائمة
+              </Link>
             </Button>
           </div>
         </div>
