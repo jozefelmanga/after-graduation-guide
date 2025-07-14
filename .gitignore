@@ -1,5 +1,4 @@
 # Logs
-whatsnext/
 logs
 *.log
 npm-debug.log*

@@ -11,7 +11,7 @@ const Index = () => {
       <NavigationBar />
       <HeroSection />
       
-      <main id="main-content" className="relative">
+      <main id="main-content" className="relative pt-16">
         {/* Background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
         
