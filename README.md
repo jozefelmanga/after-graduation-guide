@@ -24,11 +24,17 @@ npm run dev
 
 ## Deployment
 
+This project is deployed on Vercel.
+
 Build the project for production:
 
 ```sh
 npm run build
 ```
+
+## Analytics
+
+This project uses Google Analytics to track user interactions and page views.
 
 ## Author
 
