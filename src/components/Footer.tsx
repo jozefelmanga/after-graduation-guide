@@ -30,7 +30,7 @@ const Footer = () => {
           
           <div className="mt-8 pt-6 border-t border-primary-foreground/20">
             <p className="text-xs opacity-60">
-              © 2025 What's Next Guide.
+              © 2025 After Graduation Guide for Tunisian Students.
             </p>
           </div>
         </div>

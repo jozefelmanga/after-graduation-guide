@@ -22,7 +22,8 @@ const SEO = ({
   structuredData,
 }: SEOProps) => {
   // Construct the full title with site name
-  const fullTitle = `${title} | Future Tunisia Guide`;
+  const fullTitle = `${title} | After Graduation Guide for Tunisian Students`;
+  const siteName = "After Graduation Guide for Tunisian Students | دليل ما بعد التخرج للطلبة التوانسة";
   
   return (
     <Helmet htmlAttributes={{ lang }}>
@@ -40,7 +41,7 @@ const SEO = ({
       <meta property="og:type" content={ogType} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Future Tunisia Guide" />
+      <meta property="og:site_name" content={siteName} />
       
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
