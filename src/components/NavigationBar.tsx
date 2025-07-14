@@ -1,9 +1,19 @@
-import { BookOpen, School, Briefcase, GraduationCap, Home } from "lucide-react";
+import { BookOpen, School, Briefcase, GraduationCap, Home, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const NavigationBar = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
@@ -68,14 +78,66 @@ const NavigationBar = () => {
             <Button
               variant="ghost"
               size="sm"
-              asChild
+              onClick={toggleMobileMenu}
             >
-              <Link to="/">
-                القائمة
-              </Link>
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              <span className="ml-2">القائمة</span>
             </Button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 space-y-2 border-t border-border">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full flex items-center justify-start gap-2"
+              asChild
+            >
+              <Link to="/" onClick={closeMobileMenu}>
+                <Home className="w-4 h-4" />
+                الرئيسية
+              </Link>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full flex items-center justify-start gap-2"
+              asChild
+            >
+              <Link to="/master" onClick={closeMobileMenu}>
+                <BookOpen className="w-4 h-4" />
+                Master
+              </Link>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full flex items-center justify-start gap-2"
+              asChild
+            >
+              <Link to="/concours" onClick={closeMobileMenu}>
+                <School className="w-4 h-4" />
+                Concours
+              </Link>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full flex items-center justify-start gap-2"
+              asChild
+            >
+              <Link to="/alternance" onClick={closeMobileMenu}>
+                <Briefcase className="w-4 h-4" />
+                Alternance
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </nav>
   );
