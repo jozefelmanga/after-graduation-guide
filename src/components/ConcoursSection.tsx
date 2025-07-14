@@ -59,6 +59,10 @@ const ConcoursSection = () => {
     { name: "Score App", url: "https://makaabi.github.io/scoreapp/1ere" }
   ];
 
+  const warnings = [
+    "أي خطأ في المعلومات = إقصاء محتمل"
+  ];
+
   const importantNotes = [
     {
       title: "📝 الأوراق المطلوبة",
@@ -510,7 +514,32 @@ const ConcoursSection = () => {
           ))}
         </CardContent>
       </Card>
-
+        {/* Warnings */}
+        <Card className="border-amber-300 dark:border-amber-600/50 transition-colors duration-300">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-amber-700 dark:text-amber-400">
+                <AlertTriangle className="w-5 h-5" />
+                تحذيرات مهمة
+              </CardTitle>
+            </CardHeader>
+            <CardContent dir="rtl">
+              <div className="space-y-3">
+                {warnings.map((warning, index) => (
+                  <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700/50 transition-colors duration-300">
+                    <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0" />
+                    <span className="text-sm text-amber-700 dark:text-amber-300">{warning}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700/50 rounded-lg transition-colors duration-300">
+                <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">💡 نصيحة ذهبية</h4>
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  راجع كل المعلومات مرتين قبل التأكيد. البيانات الخاطئة ممكن تؤدي للإقصاء من المناظرة.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
      
     </NavigationCard>
   );

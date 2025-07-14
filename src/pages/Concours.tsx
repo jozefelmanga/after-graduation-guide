@@ -1,6 +1,5 @@
 import NavigationBar from "@/components/NavigationBar";
 import ConcoursSection from "@/components/ConcoursSection";
-import ImportantNotesSection from "@/components/ImportantNotesSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -49,7 +48,6 @@ const Concours = () => {
           <ConcoursSection />
         </div>
         
-        <ImportantNotesSection />
       </main>
       
       <Footer />

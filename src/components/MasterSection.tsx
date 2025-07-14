@@ -108,7 +108,7 @@ const MasterSection = () => {
           </CardHeader>
           <CardContent className="space-y-4" dir="rtl">
             <div className="border-r-4 border-secondary pr-4">
-              <h4 className="font-semibold text-secondary flex items-center gap-2">
+              <h4 className="font-semibold text-accent-foreground flex items-center gap-2">
                 <Briefcase className="w-4 h-4" />
                 1. Master Professionnel (ماستر مهني)
               </h4>
