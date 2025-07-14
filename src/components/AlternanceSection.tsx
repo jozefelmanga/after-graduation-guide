@@ -5,10 +5,10 @@ import NavigationCard from "./NavigationCard";
 
 const AlternanceSection = () => {
   const institutions = [
-    { name: "TEK-UP", url: "https://tek-up.de/", description: "جامعة تقنية متخصصة" },
-    { name: "ESPRIT", url: "https://www.esprit.tn/", description: "مدرسة خاصة للهندسة" },
-    { name: "SEASAM", url: "https://universitesesame.com/", description: "جامعة سيزام" },
-    { name: "ITEAM", url: "https://iteam-univ.tn/", description: "معهد التكنولوجيا" }
+    { name: "TEK-UP", url: "https://tek-up.de/", description: "جامعة تقنية متخصصة", logo: "/assets/images/tek-up.png" },
+    { name: "ESPRIT", url: "https://www.esprit.tn/", description: "مدرسة خاصة للهندسة", logo: "/assets/images/esprit.jpg" },
+    { name: "SEASAM", url: "https://universitesesame.com/", description: "جامعة سيزام", logo: "/assets/images/seasam.jpg" },
+    { name: "ITEAM", url: "https://iteam-univ.tn/", description: "معهد التكنولوجيا", logo: "/assets/images/Iteam.jpg" }
   ];
 
   return (
@@ -64,8 +64,12 @@ const AlternanceSection = () => {
                     <h4 className="font-semibold text-lg text-primary">{inst.name}</h4>
                     <p className="text-sm text-muted-foreground" dir="rtl">{inst.description}</p>
                   </div>
-                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <School className="w-4 h-4 text-primary" />
+                  <div className="w-12 h-12 rounded-lg overflow-hidden">
+                    <img 
+                      src={inst.logo} 
+                      alt={`${inst.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
                 <Button
