@@ -2,6 +2,7 @@ import { BookOpen, School, Briefcase, GraduationCap, Home, Menu, X } from "lucid
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
@@ -72,9 +73,12 @@ const NavigationBar = () => {
                 Alternance
               </Link>
             </Button>
+
+            <ThemeToggle />
           </div>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"

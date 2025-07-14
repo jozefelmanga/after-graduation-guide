@@ -7,17 +7,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-hero relative overflow-hidden transition-colors duration-300">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-white rounded-full blur-2xl"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white dark:bg-primary rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-white dark:bg-primary rounded-full blur-2xl"></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-white dark:bg-primary rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 flex items-center justify-center min-h-screen relative z-10">
         <div className="text-center text-white max-w-4xl">
-          <div className="mb-8 inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full backdrop-blur-sm">
+          <div className="mb-8 inline-flex items-center justify-center w-20 h-20 bg-white/20 dark:bg-primary/30 rounded-full backdrop-blur-sm">
             <GraduationCap className="w-10 h-10" />
           </div>
           

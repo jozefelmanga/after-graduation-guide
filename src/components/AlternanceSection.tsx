@@ -19,7 +19,7 @@ const AlternanceSection = () => {
       icon={Briefcase}
     >
       {/* Introduction */}
-      <Card className="border-secondary/20 bg-secondary/5">
+      <Card className="border-secondary/20 bg-secondary/5 dark:bg-secondary/10 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="text-secondary">ما هو التكوين المزدوج؟</CardTitle>
         </CardHeader>
@@ -28,13 +28,13 @@ const AlternanceSection = () => {
             مسار يجمع بين الدراسة والعمل في شركة بنفس الوقت. هذا النظام يخليك تكسب خبرة عملية أثناء الدراسة وتحصل على راتب في نفس الوقت.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-            <div className="bg-white/50 p-3 rounded-lg">
+            <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg transition-colors duration-300">
               <strong className="text-secondary">المزايا:</strong><br/>
               • خبرة عملية مضمونة<br/>
               • راتب أثناء الدراسة<br/>
               • فرصة شغل بعد التخرج
             </div>
-            <div className="bg-white/50 p-3 rounded-lg">
+            <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg transition-colors duration-300">
               <strong className="text-primary">المتطلبات:</strong><br/>
               • التزام بالوقت<br/>
               • توازن بين العمل والدراسة<br/>
@@ -45,7 +45,7 @@ const AlternanceSection = () => {
       </Card>
 
       {/* Institutions */}
-      <Card className="border-primary/20">
+      <Card className="border-primary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <School className="w-5 h-5" />
@@ -57,14 +57,14 @@ const AlternanceSection = () => {
             {institutions.map((inst) => (
               <div
                 key={inst.name}
-                className="border border-border rounded-lg p-4 hover:shadow-card transition-all duration-300 hover:border-primary/30"
+                className="border border-border rounded-lg p-4 hover:shadow-card transition-all duration-300 hover:border-primary/30 dark:hover:border-primary/50 dark:bg-card"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <h4 className="font-semibold text-lg text-primary">{inst.name}</h4>
                     <p className="text-sm text-muted-foreground" dir="rtl">{inst.description}</p>
                   </div>
-                  <div className="w-12 h-12 rounded-lg overflow-hidden">
+                  <div className="w-12 h-12 rounded-lg overflow-hidden bg-white dark:bg-gray-700 transition-colors duration-300">
                     <img 
                       src={inst.logo} 
                       alt={`${inst.name} logo`}
@@ -90,7 +90,7 @@ const AlternanceSection = () => {
       </Card>
 
       {/* How to Apply */}
-      <Card className="border-accent/20">
+      <Card className="border-accent/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-accent-foreground">
             <Briefcase className="w-5 h-5" />
@@ -99,7 +99,7 @@ const AlternanceSection = () => {
         </CardHeader>
         <CardContent dir="rtl">
           <div className="space-y-4">
-            <div className="bg-muted/50 p-4 rounded-lg">
+            <div className="bg-muted/50 dark:bg-muted/20 p-4 rounded-lg transition-colors duration-300">
               <h4 className="font-semibold mb-2">الخطوات العامة:</h4>
               <ol className="text-sm space-y-2">
                 <li className="flex items-center gap-2">
@@ -121,8 +121,8 @@ const AlternanceSection = () => {
               </ol>
             </div>
             
-            <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg">
-              <p className="text-sm text-amber-700">
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 p-4 rounded-lg transition-colors duration-300">
+              <p className="text-sm text-amber-700 dark:text-amber-400">
                 <strong>💡 نصيحة:</strong> كل مؤسسة عندها شروطها ومواعيدها، اتصل بالإدارة أو تابع صفحاتهم للحصول على المعلومات الدقيقة.
               </p>
             </div>
@@ -131,7 +131,7 @@ const AlternanceSection = () => {
       </Card>
 
       {/* Benefits */}
-      <Card className="border-secondary/20">
+      <Card className="border-secondary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-secondary">
             <Briefcase className="w-5 h-5" />
@@ -140,7 +140,7 @@ const AlternanceSection = () => {
         </CardHeader>
         <CardContent dir="rtl">
           <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div className="text-center p-4 bg-secondary/10 rounded-lg">
+            <div className="text-center p-4 bg-secondary/10 dark:bg-secondary/20 rounded-lg transition-colors duration-300">
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-secondary-foreground text-xl">💼</span>
               </div>
@@ -148,7 +148,7 @@ const AlternanceSection = () => {
               <p className="text-muted-foreground">تحصل على خبرة حقيقية في السوق أثناء الدراسة</p>
             </div>
             
-            <div className="text-center p-4 bg-accent/10 rounded-lg">
+            <div className="text-center p-4 bg-accent/10 dark:bg-accent/20 rounded-lg transition-colors duration-300">
               <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-accent-foreground text-xl">💰</span>
               </div>
@@ -156,7 +156,7 @@ const AlternanceSection = () => {
               <p className="text-muted-foreground">دخل مالي يساعدك على تغطية مصاريف الدراسة</p>
             </div>
             
-            <div className="text-center p-4 bg-primary/10 rounded-lg">
+            <div className="text-center p-4 bg-primary/10 dark:bg-primary/20 rounded-lg transition-colors duration-300">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-primary-foreground text-xl">🚀</span>
               </div>

@@ -86,7 +86,7 @@ const ConcoursSection = () => {
       icon={School}
     >
       {/* Introduction */}
-      <Card className="border-secondary/20 bg-secondary/5">
+      <Card className="border-secondary/20 bg-secondary/5 dark:bg-secondary/10 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="text-secondary">📌 ما هو؟</CardTitle>
         </CardHeader>
@@ -113,7 +113,7 @@ const ConcoursSection = () => {
       </Card>
 
       {/* First step */}
-      <Card className="border-primary/20 bg-primary/5">
+      <Card className="border-primary/20 bg-primary/5 dark:bg-primary/10 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="text-primary flex items-center gap-2">
             <CheckCircle className="w-5 h-5" />
@@ -151,7 +151,7 @@ const ConcoursSection = () => {
       </Card>
 
         {/* Steps */}
-        <Card className="border-primary/20">
+        <Card className="border-primary/20 transition-colors duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-primary">
               <FileCheck className="w-5 h-5" />
@@ -161,8 +161,8 @@ const ConcoursSection = () => {
           <CardContent dir="rtl">
           <div className="space-y-4">
               {steps.map((step, index) => (
-              <div key={index} className="rounded-lg border border-border">
-                <div className="flex items-center gap-3 p-3 bg-muted/30 border-b border-border">
+              <div key={index} className="rounded-lg border border-border transition-colors duration-300">
+                <div className="flex items-center gap-3 p-3 bg-muted/30 dark:bg-muted/10 border-b border-border transition-colors duration-300">
                   <Badge variant="secondary" className="min-w-8 h-8 flex items-center justify-center">
                     {index + 1}
                   </Badge>
@@ -173,8 +173,8 @@ const ConcoursSection = () => {
                 </div>
                 </div>
               ))}
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
-              <p className="text-sm text-amber-700">
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg p-3 transition-colors duration-300">
+              <p className="text-sm text-amber-700 dark:text-amber-400">
                 <strong>⚠️ مهم:</strong> الملف الورقي هو ملف واحد فقط، حتى كان عندك برشا اختيارات.
               </p>
             </div>
@@ -184,7 +184,7 @@ const ConcoursSection = () => {
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* Score Calculation */}
-        <Card className="border-accent/20">
+        <Card className="border-accent/20 transition-colors duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-accent-foreground">
               <Calculator className="w-5 h-5" />
@@ -193,7 +193,7 @@ const ConcoursSection = () => {
           </CardHeader>
           <CardContent dir="rtl">
             <div className="space-y-4">
-              <div className="bg-muted/50 p-3 rounded-lg text-sm">
+              <div className="bg-muted/50 dark:bg-muted/20 p-3 rounded-lg text-sm transition-colors duration-300">
                 <div className="flex justify-between items-start mb-2">
                   <strong className="block">كيفاش يتحسب السكور؟</strong>
                   <Button
@@ -214,7 +214,7 @@ const ConcoursSection = () => {
                 </ul>
               </div>
               
-              <div className="bg-secondary/10 p-3 rounded-lg text-sm">
+              <div className="bg-secondary/10 dark:bg-secondary/20 p-3 rounded-lg text-sm transition-colors duration-300">
                 <strong className="block mb-2">الحد الأدنى:</strong>
                 <ul className="space-y-1 list-disc pl-5">
                   <li>للترشح للسنة <strong>الأولى هندسة</strong>، لازم يكون السكور متاعك <strong>أكثر من 40 نقطة</strong></li>
@@ -247,7 +247,7 @@ const ConcoursSection = () => {
         </Card>
 
       {/* Required Documents */}
-      <Card className="border-primary/20">
+      <Card className="border-primary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <FileCheck className="w-5 h-5" />
@@ -258,7 +258,7 @@ const ConcoursSection = () => {
             <div className="space-y-4">
               <div className="grid gap-2">
             {documents.map((doc, index) => (
-              <div key={index} className="flex items-center gap-3 p-2 rounded-lg bg-muted/50">
+              <div key={index} className="flex items-center gap-3 p-2 rounded-lg bg-muted/50 dark:bg-muted/20 transition-colors duration-300">
                 <span className="text-sm">{doc}</span>
                     {index === 5 && (
                       <Button 
@@ -297,9 +297,9 @@ const ConcoursSection = () => {
       </div>
 
       {/* Check Available Concours */}
-      <Card className="border-accent/20 bg-blue-50/50">
-        <CardHeader className="bg-blue-100/30 border-b border-blue-200/30">
-          <CardTitle className="flex items-center gap-2 text-blue-700">
+      <Card className="border-accent/20 bg-blue-50/50 dark:bg-blue-900/10 transition-colors duration-300">
+        <CardHeader className="bg-blue-100/30 dark:bg-blue-800/20 border-b border-blue-200/30 dark:border-blue-700/30 transition-colors duration-300">
+          <CardTitle className="flex items-center gap-2 text-blue-700 dark:text-blue-400">
             <Search className="w-5 h-5" />
             معلومة مهمة!
           </CardTitle>
@@ -322,7 +322,7 @@ const ConcoursSection = () => {
               href="https://drive.google.com/drive/folders/1L0BbUCVmiF-MlI1jCgzUBCBIEYiRl-vR?usp=drive_link" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-between gap-2 p-3 bg-white border border-border rounded-md hover:bg-accent/5 transition-colors"
+              className="flex items-center justify-between gap-2 p-3 bg-white dark:bg-gray-800 border border-border rounded-md hover:bg-accent/5 dark:hover:bg-accent/10 transition-colors duration-300"
             >
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0">
@@ -346,7 +346,7 @@ const ConcoursSection = () => {
       </Card>
 
       {/* Types of Concours */}
-      <Card className="border-secondary/20">
+      <Card className="border-secondary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-secondary">
             <School className="w-5 h-5" />
@@ -388,12 +388,12 @@ const ConcoursSection = () => {
               </div>
             ))}
              {/* Important Final Note */}
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4" dir="rtl">
-        <h4 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
+      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg p-4 transition-colors duration-300" dir="rtl">
+        <h4 className="font-semibold text-amber-800 dark:text-amber-400 mb-2 flex items-center gap-2">
           <AlertTriangle className="w-5 h-5" />
           ملاحظة مهمة
         </h4>
-        <p className="text-sm text-amber-700">
+        <p className="text-sm text-amber-700 dark:text-amber-400">
           تابع صفحات المدارس الرسمية لمعرفة مواعيد وبلاغات المناظرات. المدارس تنشر التفاصيل في صفحاتهم الرسمية على فيسبوك، تابعهم من توا.
         </p>
       </div>
@@ -402,7 +402,7 @@ const ConcoursSection = () => {
       </Card>
 
       {/* Important Dates */}
-      <Card className="border-primary/20">
+      <Card className="border-primary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <Calendar className="w-5 h-5" />
@@ -411,7 +411,7 @@ const ConcoursSection = () => {
         </CardHeader>
         <CardContent dir="rtl">
           <div className="space-y-4">
-            <div className="bg-muted/30 p-3 rounded-lg">
+            <div className="bg-muted/30 dark:bg-muted/20 p-3 rounded-lg transition-colors duration-300">
               <h4 className="font-medium flex items-center gap-2">
                 <Clock className="w-4 h-4" /> متى تنشر البلاغات؟
               </h4>
@@ -422,7 +422,7 @@ const ConcoursSection = () => {
               </ul>
             </div>
             
-            <div className="bg-primary/5 p-3 rounded-lg">
+            <div className="bg-primary/5 dark:bg-primary/10 p-3 rounded-lg transition-colors duration-300">
               <h4 className="font-medium flex items-center gap-2">
                 <PieChart className="w-4 h-4" /> نتائج العام اللي فات
               </h4>
@@ -434,13 +434,13 @@ const ConcoursSection = () => {
                 href="https://www.facebook.com/share/p/1DriEeJsqT/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block mt-3 border border-border rounded-md overflow-hidden bg-card transition-all hover:bg-accent/5"
+                className="block mt-3 border border-border rounded-md overflow-hidden bg-card transition-all hover:bg-accent/5 dark:hover:bg-accent/10"
               >
                 <div className="flex items-stretch">
-                  <div className="w-3 bg-blue-600"></div>
+                  <div className="w-3 bg-blue-600 dark:bg-blue-500"></div>
                   <div className="flex-1 p-3">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 transition-colors duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                       </div>
                       <div>
@@ -461,7 +461,7 @@ const ConcoursSection = () => {
       </Card>
 
       {/* Important Notes */}
-      <Card className="border-secondary/20">
+      <Card className="border-secondary/20 transition-colors duration-300">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-secondary">
             <AlertTriangle className="w-5 h-5" />
@@ -472,19 +472,19 @@ const ConcoursSection = () => {
           {importantNotes.map((note, index) => (
             <div 
               key={index} 
-              className={`p-4 mb-4 rounded-lg border-l-4 ${
-                index === 0 ? "bg-blue-50 border-blue-500" : 
-                index === 1 ? "bg-green-50 border-green-500" : 
-                index === 2 ? "bg-purple-50 border-purple-500" : 
-                "bg-red-50 border-red-500"
+              className={`p-4 mb-4 rounded-lg border-l-4 transition-colors duration-300 ${
+                index === 0 ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 dark:border-blue-400" : 
+                index === 1 ? "bg-green-50 dark:bg-green-900/20 border-green-500 dark:border-green-400" : 
+                index === 2 ? "bg-purple-50 dark:bg-purple-900/20 border-purple-500 dark:border-purple-400" : 
+                "bg-red-50 dark:bg-red-900/20 border-red-500 dark:border-red-400"
               }`}
             >
               <div className="flex items-start gap-3">
-                <div className={`p-2 rounded-full ${
-                  index === 0 ? "bg-blue-100 text-blue-600" : 
-                  index === 1 ? "bg-green-100 text-green-600" : 
-                  index === 2 ? "bg-purple-100 text-purple-600" : 
-                  "bg-red-100 text-red-600"
+                <div className={`p-2 rounded-full transition-colors duration-300 ${
+                  index === 0 ? "bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300" : 
+                  index === 1 ? "bg-green-100 dark:bg-green-800/50 text-green-600 dark:text-green-300" : 
+                  index === 2 ? "bg-purple-100 dark:bg-purple-800/50 text-purple-600 dark:text-purple-300" : 
+                  "bg-red-100 dark:bg-red-800/50 text-red-600 dark:text-red-300"
                 }`}>
                   {index === 0 ? (
                     <FileCheck className="w-5 h-5" />
@@ -497,7 +497,7 @@ const ConcoursSection = () => {
                   )}
                 </div>
                 <div>
-                  <h4 className="font-bold text-base mb-2">{note.title}</h4>
+                  <h4 className="font-bold text-base mb-2 text-foreground">{note.title}</h4>
                   <p className="text-sm text-muted-foreground">
                     {note.content}
                   </p>
