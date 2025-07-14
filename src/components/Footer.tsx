@@ -1,4 +1,5 @@
 import { Heart, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -26,7 +27,26 @@ const Footer = () => {
             <p>إذا ساعدك المحتوى، شاركه مع أصحابك 🫶</p>
           </div>
           
-          <div className="pt-4 border-t border-white/20 dark:border-white/10">
+          <div className="mt-4 pt-4 border-t border-white/20 dark:border-white/10">
+            <Button 
+              variant="outline" 
+              className="bg-white hover:bg-white/90 text-gray-800 border-none mb-4 transition-all"
+              asChild
+            >
+              <a 
+                href="https://www.notion.so/What-s-Next-2135aa5d141480238827d283e1d4575a" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                <img 
+                  src="/assets/images/Notion_app_logo.png" 
+                  alt="Notion Logo" 
+                  className="w-5 h-5"
+                />
+                <span>Original Notion Guide</span>
+              </a>
+            </Button>
             <p className="text-xs text-white/70">
               © 2025 After Graduation Guide
             </p>
