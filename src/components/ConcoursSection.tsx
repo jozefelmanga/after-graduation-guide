@@ -532,12 +532,7 @@ const ConcoursSection = () => {
                 ))}
               </div>
               
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700/50 rounded-lg transition-colors duration-300">
-                <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">💡 نصيحة ذهبية</h4>
-                <p className="text-sm text-blue-700 dark:text-blue-300">
-                  راجع كل المعلومات مرتين قبل التأكيد. البيانات الخاطئة ممكن تؤدي للإقصاء من المناظرة.
-                </p>
-              </div>
+              
             </CardContent>
           </Card>
      
