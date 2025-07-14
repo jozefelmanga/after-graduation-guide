@@ -22,7 +22,7 @@ const NavigationBar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
             <GraduationCap className="w-6 h-6 text-primary" />
-            <span className="font-bold text-lg text-foreground">What's Next?</span>
+            <span className="font-bold text-lg text-foreground">After Graduation Guide</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-2">
