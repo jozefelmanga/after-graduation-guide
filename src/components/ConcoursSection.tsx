@@ -336,7 +336,7 @@ const ConcoursSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium">سكور E يختلف من كلية لكلية، وها الرابط متاع Google Drive فيه أغلب الملاحق</p>
+                  <p className="text-sm font-medium">باش تلقى أغلب الفورمولات متاع سكور E في الرابط هذا</p>
                 </div>
               </div>
               <ExternalLink className="w-4 h-4 flex-shrink-0" />
@@ -379,8 +379,7 @@ const ConcoursSection = () => {
                     {type.link && (
                       <Button variant="outline" size="sm" className="mt-2" asChild>
                         <a href={type.link} target="_blank" rel="noopener noreferrer">
-                          تفاصيل المناظرات المستقلة
-                          <ExternalLink className="w-4 h-4 ml-2" />
+                        الملاحق يختلفو من كلية لكلية، وها الرابط متاع Google Drive فيه أغلبهم                          <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                       </Button>
                     )}
@@ -388,6 +387,16 @@ const ConcoursSection = () => {
                 )}
               </div>
             ))}
+             {/* Important Final Note */}
+      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4" dir="rtl">
+        <h4 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
+          <AlertTriangle className="w-5 h-5" />
+          ملاحظة مهمة
+        </h4>
+        <p className="text-sm text-amber-700">
+          تابع صفحات المدارس الرسمية لمعرفة مواعيد وبلاغات المناظرات. المدارس تنشر التفاصيل في صفحاتهم الرسمية على فيسبوك، تابعهم من توا.
+        </p>
+      </div>
           </div>
         </CardContent>
       </Card>
@@ -499,16 +508,7 @@ const ConcoursSection = () => {
         </CardContent>
       </Card>
 
-      {/* Important Final Note */}
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4" dir="rtl">
-        <h4 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
-          <AlertTriangle className="w-5 h-5" />
-          ملاحظة مهمة
-        </h4>
-        <p className="text-sm text-amber-700">
-          تابع صفحات المدارس الرسمية لمعرفة مواعيد وبلاغات المناظرات. المدارس تنشر التفاصيل في صفحاتهم الرسمية على فيسبوك، تابعهم من توا.
-        </p>
-      </div>
+     
     </NavigationCard>
   );
 };
