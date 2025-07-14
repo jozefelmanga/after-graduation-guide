@@ -2,12 +2,58 @@ import HeroSection from "@/components/HeroSection";
 import NavigationBar from "@/components/NavigationBar";
 import SectionCard from "@/components/SectionCard";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { BookOpen, School, Briefcase, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
+  // Structured data for home page (Organization + WebSite)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://after-graduation.netlify.app/#organization",
+        "name": "Future Tunisia Guide",
+        "url": "https://after-graduation.netlify.app/",
+        "description": "دليل للطلبة المتخرجين في تونس - خيارات ما بعد الإجازة"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://after-graduation.netlify.app/#website",
+        "url": "https://after-graduation.netlify.app/",
+        "name": "Future Tunisia Guide",
+        "publisher": {
+          "@id": "https://after-graduation.netlify.app/#organization"
+        },
+        "inLanguage": "ar"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://after-graduation.netlify.app/#webpage",
+        "url": "https://after-graduation.netlify.app/",
+        "name": "Future Tunisia Guide - دليل المستقبل للطلبة المتخرجين في تونس",
+        "isPartOf": {
+          "@id": "https://after-graduation.netlify.app/#website"
+        },
+        "about": {
+          "@id": "https://after-graduation.netlify.app/#organization"
+        },
+        "description": "دليل للطلبة المتخرجين في تونس - خيارات ما بعد الإجازة",
+        "inLanguage": "ar"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="دليل المستقبل للطلبة المتخرجين في تونس"
+        description="دليل مفصل للخيارات المتاحة بعد التخرج في تونس: الماجستير، المناظرة الخصوصية للمهندسين، والتكوين المزدوج"
+        canonicalUrl="https://after-graduation.netlify.app/"
+        keywords="تعليم تونس، ماجستير، مهندسين، تكوين مزدوج، خريجين، مستقبل مهني، توجيه دراسي"
+        structuredData={structuredData}
+      />
       <NavigationBar />
       <HeroSection />
       
