@@ -36,7 +36,68 @@ const MasterSection = () => {
       description="🎓 الماجستير"
       icon={BookOpen}
     >
+      <div className="flex flex-col gap-4">
+        {/* Important Note */}
+      <Card className="bg-primary/10 border border-primary/20 rounded-lg">
+        <CardHeader>
+          <CardTitle className="text-primary flex items-center gap-2">
+            <Info className="w-5 h-5" />
+            كيفاش تبدا في الماستير بطريقة ذكية؟
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-3" dir="rtl">
+          <div className="flex flex-col md:flex-row gap-1 items-center">
+            <div className="flex-1 space-y-2">
+              <p className="text-sm">
+                أبدا بتبع صفحة <strong>invention TN</strong> — المصدر الرسمي لأخبار الماستير والفرص الدراسية في تونس. 🧭✨
+              </p>
+              
+              <div className="bg-accent/10 p-2 rounded-md">
+                <p className="text-sm">تلقى فيها:</p>
+                <ul className="list-disc list-inside text-sm mt-1">
+                  <li>تفاصيل البرامج</li>
+                  <li>مواعيد الكونكور</li>
+                  <li>منح وفرص قراية</li>
+                </ul>
+              </div>
+              
+              <div className="bg-muted p-2 rounded-md">
+                <p className="text-sm font-medium">🆕 ملاحظة: الصفحة القديمة تمسحت، هاذي هي <strong>الرسمية الجديدة</strong>، تابعها كل نهار باش تكون ديما مواكب.</p>
+                <ul className="text-sm mt-2">
+                  <li className="flex items-center gap-2">✅ تتحدّث بصفة دورية</li>
+                  <li className="flex items-center gap-2">✅ تغطي جميع الجامعات</li>
+                  <li className="flex items-center gap-2">✅ تلقى فيها فرص محلية ودولية</li>
+                </ul>
+              </div>
+              
+              <div className="bg-secondary/10 p-2 rounded-md">
+                <p className="text-sm font-medium">
+                  <Bell className="inline-block w-4 h-4 mr-1" />
+                  خليها عادة كل نهار تطل تشوف، يمكن تلقى فرصة تبدّل بيها مستقبلك.
+                </p>
+              </div>
+            </div>
+            
+            <div className="md:w-2/5 flex-shrink-0">
+              <img 
+                src="/assets/images/invention.png" 
+                alt="Invention TN" 
+                className="rounded-lg shadow-md w-full max-w-[280px] mx-auto"
+              />
+            </div>
+          </div>
+          
+          <Button variant="accent" size="sm" className="mt-3 w-full" asChild>
+            <a href="https://www.facebook.com/profile.php?id=61577206291378" target="_blank" rel="noopener noreferrer">
+              متابعة صفحة invention TN على فيسبوك
+              <ExternalLink className="w-4 h-4 mr-2" />
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
+      </div>
       <div className="grid md:grid-cols-2 gap-6">
+        
         {/* Master Types */}
         <Card className="border-primary/20">
           <CardHeader>
@@ -182,64 +243,7 @@ const MasterSection = () => {
         </CardContent>
       </Card>
 
-      {/* Important Note */}
-      <Card className="bg-primary/10 border border-primary/20 rounded-lg">
-        <CardHeader>
-          <CardTitle className="text-primary flex items-center gap-2">
-            <Info className="w-5 h-5" />
-            كيفاش تبدا في الماستير بطريقة ذكية؟
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3" dir="rtl">
-          <div className="flex flex-col md:flex-row gap-1 items-center">
-            <div className="flex-1 space-y-2">
-              <p className="text-sm">
-                أبدا بتبع صفحة <strong>invention TN</strong> — المصدر الرسمي لأخبار الماستير والفرص الدراسية في تونس. 🧭✨
-              </p>
-              
-              <div className="bg-accent/10 p-2 rounded-md">
-                <p className="text-sm">تلقى فيها:</p>
-                <ul className="list-disc list-inside text-sm mt-1">
-                  <li>تفاصيل البرامج</li>
-                  <li>مواعيد الكونكور</li>
-                  <li>منح وفرص قراية</li>
-                </ul>
-              </div>
-              
-              <div className="bg-muted p-2 rounded-md">
-                <p className="text-sm font-medium">🆕 ملاحظة: الصفحة القديمة تمسحت، هاذي هي <strong>الرسمية الجديدة</strong>، تابعها كل نهار باش تكون ديما مواكب.</p>
-                <ul className="text-sm mt-2">
-                  <li className="flex items-center gap-2">✅ تتحدّث بصفة دورية</li>
-                  <li className="flex items-center gap-2">✅ تغطي جميع الجامعات</li>
-                  <li className="flex items-center gap-2">✅ تلقى فيها فرص محلية ودولية</li>
-                </ul>
-              </div>
-              
-              <div className="bg-secondary/10 p-2 rounded-md">
-                <p className="text-sm font-medium">
-                  <Bell className="inline-block w-4 h-4 mr-1" />
-                  خليها عادة كل نهار تطل تشوف، يمكن تلقى فرصة تبدّل بيها مستقبلك.
-                </p>
-              </div>
-            </div>
-            
-            <div className="md:w-2/5 flex-shrink-0">
-              <img 
-                src="/assets/images/invention.png" 
-                alt="Invention TN" 
-                className="rounded-lg shadow-md w-full max-w-[280px] mx-auto"
-              />
-            </div>
-          </div>
-          
-          <Button variant="accent" size="sm" className="mt-3 w-full" asChild>
-            <a href="https://www.facebook.com/profile.php?id=61577206291378" target="_blank" rel="noopener noreferrer">
-              متابعة صفحة invention TN على فيسبوك
-              <ExternalLink className="w-4 h-4 mr-2" />
-            </a>
-          </Button>
-        </CardContent>
-      </Card>
+      
     </NavigationCard>
   );
 };
