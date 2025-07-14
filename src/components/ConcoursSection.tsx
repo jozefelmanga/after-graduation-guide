@@ -377,9 +377,12 @@ const ConcoursSection = () => {
                 <p className="text-sm text-muted-foreground">{type.examples}</p>
                     
                     {type.link && (
-                      <Button variant="outline" size="sm" className="mt-2" asChild>
+                      <Button variant="outline" size="sm" className="mt-2 flex-wrap text-wrap whitespace-normal h-auto py-2" asChild>
                         <a href={type.link} target="_blank" rel="noopener noreferrer">
-                        الملاحق يختلفو من كلية لكلية، وها الرابط متاع Google Drive فيه أغلبهم                          <ExternalLink className="w-4 h-4 ml-2" />
+                        <span className="flex items-center gap-2">
+                          <span>الملاحق يختلفو من كلية لكلية، وها الرابط متاع Google Drive فيه أغلبهم</span>
+                          <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                        </span>
                         </a>
                       </Button>
                     )}

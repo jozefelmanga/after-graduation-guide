@@ -22,8 +22,8 @@ const SEO = ({
   structuredData,
 }: SEOProps) => {
   // Construct the full title with site name
-  const fullTitle = `${title} | After Graduation Guide for Tunisian Students`;
-  const siteName = "After Graduation Guide for Tunisian Students | دليل ما بعد التخرج للطلبة التوانسة";
+  const fullTitle = `${title} | After Graduation Guide`;
+  const siteName = "After Graduation Guide | دليل ما بعد التخرج";
   
   return (
     <Helmet htmlAttributes={{ lang }}>

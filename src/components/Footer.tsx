@@ -28,7 +28,7 @@ const Footer = () => {
           
           <div className="pt-4 border-t border-white/20 dark:border-white/10">
             <p className="text-xs text-white/70">
-              © 2025 After Graduation Guide for Tunisian Students
+              © 2025 After Graduation Guide
             </p>
           </div>
         </div>
