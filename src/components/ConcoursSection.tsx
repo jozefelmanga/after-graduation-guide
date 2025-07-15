@@ -216,6 +216,29 @@ const ConcoursSection = () => {
                   <li><strong>سكور A:</strong> يتم احتسابه أوتوماتيكياً من طرف الوزارة ويشمل: معدلاتك، الرتبة، الباك، الفرنسية، الإنجليزية، والعمر (أقل من 23 أو 24 يعطيك نقاط إضافية).</li>
                   <li><strong>سكور E:</strong> خاص ببعض المدارس، كل مدرسة تحدد طريقة الاحتساب والمواد المعنية.</li>
                 </ul>
+                <a 
+              href="https://drive.google.com/drive/folders/1L0BbUCVmiF-MlI1jCgzUBCBIEYiRl-vR?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-2 p-3 bg-white dark:bg-gray-800 border border-border rounded-md hover:bg-accent/5 dark:hover:bg-accent/10 transition-colors duration-300 mt-2"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 87.3 78">
+                    <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5l5.4 9.35z" fill="#0066da"/>
+                    <path d="M43.65 25L29.9 1.2c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0-1.2 4.5h27.45l16.2-28z" fill="#00ac47"/>
+                    <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.5L73.55 76.8z" fill="#ea4335"/>
+                    <path d="M43.65 25L57.4 1.2c-1.35-.8-2.9-1.2-4.5-1.2H34.4c-1.6 0-3.15.45-4.5 1.2l14.25 23.8z" fill="#00832d"/>
+                    <path d="M59.5 53H87.3c0-1.55-.4-3.1-1.2-4.5l-5.4-9.35-8.05-13.95c-.8-1.4-1.95-2.5-3.3-3.3L43.65 53h15.85z" fill="#2684fc"/>
+                    <path d="M73.55 76.8L59.5 53H43.65L29.9 76.8c1.35.8 2.9 1.2 4.5 1.2h34.65c1.6 0 3.15-.45 4.5-1.2z" fill="#ffba00"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-medium">باش تلقى أغلب الفورمولات متاع سكور E في الرابط هذا</p>
+                </div>
+              </div>
+              <ExternalLink className="w-4 h-4 flex-shrink-0" />
+            </a>
               </div>
               
               <div className="bg-secondary/10 dark:bg-secondary/20 p-3 rounded-lg text-sm transition-colors duration-300">
@@ -322,29 +345,7 @@ const ConcoursSection = () => {
               </a>
             </Button>
             
-            <a 
-              href="https://drive.google.com/drive/folders/1L0BbUCVmiF-MlI1jCgzUBCBIEYiRl-vR?usp=drive_link" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-between gap-2 p-3 bg-white dark:bg-gray-800 border border-border rounded-md hover:bg-accent/5 dark:hover:bg-accent/10 transition-colors duration-300"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 87.3 78">
-                    <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5l5.4 9.35z" fill="#0066da"/>
-                    <path d="M43.65 25L29.9 1.2c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0-1.2 4.5h27.45l16.2-28z" fill="#00ac47"/>
-                    <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.5L73.55 76.8z" fill="#ea4335"/>
-                    <path d="M43.65 25L57.4 1.2c-1.35-.8-2.9-1.2-4.5-1.2H34.4c-1.6 0-3.15.45-4.5 1.2l14.25 23.8z" fill="#00832d"/>
-                    <path d="M59.5 53H87.3c0-1.55-.4-3.1-1.2-4.5l-5.4-9.35-8.05-13.95c-.8-1.4-1.95-2.5-3.3-3.3L43.65 53h15.85z" fill="#2684fc"/>
-                    <path d="M73.55 76.8L59.5 53H43.65L29.9 76.8c1.35.8 2.9 1.2 4.5 1.2h34.65c1.6 0 3.15-.45 4.5-1.2z" fill="#ffba00"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-medium">باش تلقى أغلب الفورمولات متاع سكور E في الرابط هذا</p>
-                </div>
-              </div>
-              <ExternalLink className="w-4 h-4 flex-shrink-0" />
-            </a>
+           
           </div>
         </CardContent>
       </Card>
@@ -384,7 +385,7 @@ const ConcoursSection = () => {
                       <Button variant="outline" size="sm" className="mt-2 flex-wrap text-wrap whitespace-normal h-auto py-2" asChild>
                         <a href={type.link} target="_blank" rel="noopener noreferrer">
                         <span className="flex items-center gap-2">
-                          <span>الملاحق يختلفو من كلية لكلية، وها الرابط متاع Google Drive فيه أغلبهم</span>
+                          <span>ملحقات يختلفو من كلية لكلية، وها الرابط متاع Google Drive فيه أغلبهم</span>
                           <ExternalLink className="w-4 h-4 flex-shrink-0" />
                         </span>
                         </a>
