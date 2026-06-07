@@ -1,4 +1,4 @@
-# 🎓 After Graduation Guide
+# 🎓 After Graduation Guide 
 
 > **A comprehensive, bilingual guide helping Tunisian students navigate post-graduation opportunities with detailed information about Master's programs, engineering competitions, and work-study programs.**
 
