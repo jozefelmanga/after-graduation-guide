@@ -440,6 +440,32 @@ const ConcoursSection = () => {
               <p className="text-sm mt-2">
                 تنجم تطلّع على نتائج العام اللي فات تاخو فكرة على السكورات اللي تقبلوا بيهم لكل شعبة ولكل مدرسة.
               </p>
+
+              <a 
+                href="https://www.facebook.com/share/p/1DmMsWLHCG/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block mt-3 border border-border rounded-md overflow-hidden bg-card transition-all hover:bg-accent/5 dark:hover:bg-accent/10"
+              >
+                <div className="flex items-stretch">
+                  <div className="w-3 bg-blue-600 dark:bg-blue-500"></div>
+                  <div className="flex-1 p-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                      </div>
+                      <div>
+                        <p className="font-medium text-sm">نتائج المناظرة الخصوصية 2024/2025</p>
+                        <p className="text-xs text-muted-foreground">facebook.com</p>
+                      </div>
+                    </div>
+                    <div className="mt-2 border-t border-border pt-2 flex justify-between items-center">
+                      <p className="text-xs text-muted-foreground">شوف نتائج 2024/2025</p>
+                      <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />
+                    </div>
+                  </div>
+                </div>
+              </a>
               
               <a 
                 href="https://www.facebook.com/share/p/1DriEeJsqT/" 
@@ -460,7 +486,7 @@ const ConcoursSection = () => {
                       </div>
                     </div>
                     <div className="mt-2 border-t border-border pt-2 flex justify-between items-center">
-                      <p className="text-xs text-muted-foreground">شوف نتائج العام اللي فات</p>
+                      <p className="text-xs text-muted-foreground">شوف نتائج 2023/2024</p>
                       <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />
                     </div>
                   </div>
